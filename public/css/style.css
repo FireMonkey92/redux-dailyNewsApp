@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+    padding: 0; 
+    color: #313131;
+    font-family: 'Kalam', cursive;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*============================= 
+        header, footer
+================================*/
+
+header,footer{
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+    font-size: 20px;
+    padding: 10px 0px;
+}
+ 

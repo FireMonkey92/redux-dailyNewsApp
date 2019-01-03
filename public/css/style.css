@@ -1,6 +1,6 @@
-body{
+body {
     margin: 0;
-    padding: 0; 
+    padding: 0;
     color: #313131;
     font-family: 'Kalam', cursive;
 }
@@ -12,13 +12,117 @@ a {
 
 /*============================= 
         header, footer
-================================*/
+=============================*/
 
-header,footer{
+header, footer {
     font-family: 'Pacifico', cursive;
     text-align: center;
     border-bottom: 1px solid lightgray;
-    font-size: 20px;
+    font-size: 15px;
     padding: 10px 0px;
 }
- 
+
+/*============================= 
+        lattest 
+==============================*/
+
+.lattest_affairs {
+    box-sizing: border-box;
+    padding: 0px;
+}
+
+.lattest_affairs .item .news_cover {
+    background-size: cover !important;
+    position: relative;
+    height: 200px;
+    background-position: center 0px !important;
+}
+
+.lattest_affairs .item .description {
+    position: absolute;
+    bottom: 0;
+}
+
+.lattest_affairs .item .description span {
+    background: #00bcd4;
+    color: white;
+    display: inline-block;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+.lattest_affairs .item .description div {
+    background: rgba(31, 30, 30, 0.634);
+    font-weight: 500;
+    padding: 5px;
+    font-size: 13px;
+    color: white;
+    width: 40%;
+}
+
+/*============================= 
+        Other News
+==============================*/
+
+.other_affairs {
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.other_affairs h2 {
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0px;
+}
+
+.other_affairs_items .item {
+    display: flex;
+    border: 1px solid #e6e6e6;
+}
+
+.other_affairs_items .item .left {
+    flex-grow: 1;
+    width: 100px;
+    height: 120px;
+    background-size: cover !important;
+    background-position: center center !important;
+}
+
+.other_affairs_items .item .right{
+    width: 80%;
+    height: 120px; 
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.other_affairs_items .item .right h3{
+    margin: 0;
+    font-weight: 500;
+    font-size: 14px;
+}
+.other_affairs_items .item .right .category_tag{
+     right: 0;
+     bottom: 0;
+     margin: 10px;
+     position: absolute;
+
+     background: #00bcd4;
+     color: white;
+     display: inline-block;
+     padding: 5px 10px;
+     text-transform: uppercase;
+     font-size: 12px;
+}
+.other_affairs_items .item .right .tags{
+    left: 0;
+    bottom: 0;
+    margin: 10px;
+    position: absolute;
+}
+.other_affairs_items .item .right .tags span{
+    margin: 10px;
+    font-size: 12px;
+    color: #607d8b;
+}

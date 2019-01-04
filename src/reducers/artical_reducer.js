@@ -1,5 +1,5 @@
 
-export default function(state={},action){
+export default function (state = {}, action) {
     switch (action.type) {
         case 'GET_LATTEST':
             return {
@@ -9,14 +9,18 @@ export default function(state={},action){
         case 'GET_OTHERS':
             return {
                 ...state,
-                others: action.payload 
+                others: action.payload
             }
-        case 'GET_GALLERY':
+        case 'GET_SELECTED_NEWS':
             return {
                 ...state,
-                gallery: action.payload
+                selected: action.payload
             }
-            
+        case 'CLEAR_NEWS':
+            return {
+                ...state,
+                selected: action.payload
+            }
         default:
             return state;
     }

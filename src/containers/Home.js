@@ -20,7 +20,7 @@ class Home extends Component {
             <div className='main'>
                 <LattestNews lattest={this.props.articles.lattest}/>
                 <OtherNews   others={this.props.articles.others}/>
-                <Gallery   gallery={this.props.articles.gallery} />
+                <Gallery   gallery={this.props.gallery.gallery} />
             </div>
         )
     }

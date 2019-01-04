@@ -1,4 +1,6 @@
 const URL = 'http://localhost:3004';
+const GIT_URL = 'https://my-json-server.typicode.com/FireMonkey92/redux-dailyNewsApp/'
+
 
 export function lattestNews(){
 
@@ -31,3 +33,42 @@ export function getGallery(){
         payload: request
     }
 }
+
+export function getSelectedNews(id) {
+    const request = fetch(`${URL}/articles?id=${id}`,{
+        method :'GET'
+    }).then(res => res.json())
+
+    return{
+        type : 'GET_SELECTED_NEWS',
+        payload: request 
+    }
+}
+export function clearNews(){
+    return{
+        type : 'CLEAR_NEWS',
+        payload: []
+    }
+}
+
+
+export function getSelectedGallery(id) {
+
+    const request = fetch(`${URL}/galleries?id=${id}` , {
+        method :'GET' 
+    }).then(res => res.json())
+
+    return{
+        type : 'GET_SELECTED_GALLERY',
+        payload: request 
+    }
+}
+
+export function clearSelectedGallery() {
+
+    return {
+        type : 'CLEAER_SELECTED_GALERY',
+        payload: []
+    }
+}
+

@@ -7,9 +7,12 @@ import Header from './Header';
 import Footer from  './Footer';
 
 
-
 // containers 
 import Home from '../containers/Home';
+import News from '../containers/News';
+import GalleryItems from '../containers/GalleryItem';
+
+
 
 class App extends Component {
   render() {
@@ -18,6 +21,8 @@ class App extends Component {
         <div>
         <Header/>
           <Switch> 
+            <Route path='/gallery/:id' component={GalleryItems}/>
+            <Route path='/news/:id' component={News}/>
             <Route exact path='/' component={Home}></Route>
           </Switch>
         <Footer/>  

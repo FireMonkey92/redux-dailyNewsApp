@@ -1,10 +1,10 @@
-const URL = 'http://localhost:3004';
+// const URL = 'http://localhost:3004';
 const GIT_URL = 'https://my-json-server.typicode.com/FireMonkey92/redux-dailyNewsApp/'
 
 
 export function lattestNews(){
 
-         const request = fetch(`${URL}/articles?_order=desc&_end=3`,{
+         const request = fetch(`${GIT_URL}/articles?_order=desc&_end=3`,{
              method: 'GET'
          }).then(responce => responce.json())
          return {
@@ -14,7 +14,7 @@ export function lattestNews(){
 }
 export function othersNews(){
 
-    const request = fetch(`${URL}/articles?_order=desc&_start=3&_end=10`,{
+    const request = fetch(`${GIT_URL}/articles?_order=desc&_start=3&_end=10`,{
         method: 'GET'
     }).then(responce => responce.json())
     return {
@@ -25,7 +25,7 @@ export function othersNews(){
 
 export function getGallery(){
 
-    const request = fetch(`${URL}/galleries`,{
+    const request = fetch(`${GIT_URL}/galleries`,{
         method: 'GET'
     }).then(responce => responce.json())
     return {
@@ -33,9 +33,9 @@ export function getGallery(){
         payload: request
     }
 }
-
+///////////////////////
 export function getSelectedNews(id) {
-    const request = fetch(`${URL}/articles?id=${id}`,{
+    const request = fetch(`${GIT_URL}/articles?id=${id}`,{
         method :'GET'
     }).then(res => res.json())
 
@@ -51,10 +51,10 @@ export function clearNews(){
     }
 }
 
-
+///////////////////////
 export function getSelectedGallery(id) {
 
-    const request = fetch(`${URL}/galleries?id=${id}` , {
+    const request = fetch(`${GIT_URL}/galleries?id=${id}` , {
         method :'GET' 
     }).then(res => res.json())
 
@@ -63,7 +63,6 @@ export function getSelectedGallery(id) {
         payload: request 
     }
 }
-
 export function clearSelectedGallery() {
 
     return {
@@ -72,3 +71,23 @@ export function clearSelectedGallery() {
     }
 }
 
+
+////////////////////
+
+export function handleLikes(newLikeArry,id,section,type) {
+    
+    const request =  fetch(`${GIT_URL}/${section}/${id}`,{
+        method: 'PATCH',
+        headers: {
+            'Accept' : 'application/json',
+            'Content-Type' : 'application/json'
+        },
+        body: JSON.stringify({likes:newLikeArry})
+
+    }).then(res => res.json());
+
+    return {
+        type: type,
+        payload : request
+    }
+}

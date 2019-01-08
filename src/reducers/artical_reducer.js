@@ -21,6 +21,11 @@ export default function (state = {}, action) {
                 ...state,
                 selected: action.payload
             }
+        case 'HANDLE_LIKE_ARTICLE':
+            return{
+                ...state,
+                selected: [action.payload]
+            }
         default:
             return state;
     }

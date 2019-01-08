@@ -16,6 +16,11 @@ export default function (state = {}, action) {
                 ...state,
                 selectedGallery: action.payload
             }
+        case 'HANDLE_LIKE_GALLERIES':
+            return {
+                ...state,
+                selectedGallery: [action.payload]
+            }
         default:
             return state;
     }

@@ -10,6 +10,19 @@ a {
     color: inherit;
 }
 
+/* CSS For selected Text Color Change */
+
+::-moz-selection {
+    /* Code for Firefox */
+    color: #f8f8f8;
+    background: #505e68;
+}
+
+::selection {
+    color: #f8f8f8;
+    background: #505e68;
+}
+
 /*============================= 
         header, footer
 =============================*/
@@ -90,39 +103,41 @@ header, footer {
     background-position: center center !important;
 }
 
-.other_affairs_items .item .right{
+.other_affairs_items .item .right {
     width: 80%;
-    height: 120px; 
+    height: 120px;
     padding: 10px;
     box-sizing: border-box;
     position: relative;
 }
 
-.other_affairs_items .item .right h3{
+.other_affairs_items .item .right h3 {
     margin: 0;
     font-weight: 500;
     font-size: 14px;
 }
-.other_affairs_items .item .right .category_tag{
-     right: 0;
-     bottom: 0;
-     margin: 10px;
-     position: absolute;
 
-     background: #00bcd4;
-     color: white;
-     display: inline-block;
-     padding: 5px 10px;
-     text-transform: uppercase;
-     font-size: 12px;
+.other_affairs_items .item .right .category_tag {
+    right: 0;
+    bottom: 0;
+    margin: 10px;
+    position: absolute;
+    background: #00bcd4;
+    color: white;
+    display: inline-block;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-size: 12px;
 }
-.other_affairs_items .item .right .tags{
+
+.other_affairs_items .item .right .tags {
     left: 0;
     bottom: 0;
     margin: 10px;
     position: absolute;
 }
-.other_affairs_items .item .right .tags span{
+
+.other_affairs_items .item .right .tags span {
     margin: 10px;
     font-size: 12px;
     color: #607d8b;
@@ -131,77 +146,159 @@ header, footer {
 /*============================= 
         Artist gallery 
 ==============================*/
-.gallery_container{
+
+.gallery_container {
     text-align: left;
     padding: 10px;
 }
-.gallery_container h2{
+
+.gallery_container h2 {
     font-weight: 400;
     font-size: 18px;
     margin: 0px !important;
 }
-.gallery_container .slide_items .image{
+
+.gallery_container .slide_items .image {
     background-size: cover !important;
     background-position: center center !important;
     width: 100%;
     height: 370px;
     position: relative;
 }
-.gallery_container .slide_items .image h3{
+
+.gallery_container .slide_items .image h3 {
     position: absolute;
     bottom: 0;
-    right:  0;
+    right: 0;
     background: #363333b4;
     padding: 3vw 10px !important;
     font-weight: 300;
     color: #e6e6e6;
-
 }
+
 /*============================= 
         News Container
 ==============================*/
 
-.news_component .tags{
+.news_component .tags {
     background: #f8f8f8;
     color: #c5c5c5;
-    font-size: 12px; 
+    font-size: 12px;
     padding: 10px;
 }
-.news_component .tags span{
+
+.news_component .tags span {
     margin-right: 14px;
 }
-.news_component .tags span i{
+
+.news_component .tags span i {
     padding: 7px;
 }
 
-.news_component .top{
-    padding: 10px; 
-    box-sizing: border-box; 
+.news_component .top {
+    padding: 10px;
+    box-sizing: border-box;
 }
-.news_component .top h2{
+
+.news_component .top h2 {
     font-weight: 700;
     font-size: 30px;
     margin: 0px;
     line-height: 40px;
 }
-.news_component .top span{
+
+.news_component .top span {
     color: #00bcd4;
     font-weight: 300;
     font-size: 12px;
     margin-top: 10px;
-    display: inline-block; 
+    display: inline-block;
 }
 
-.news_component .Body_news img{
+.news_component .Body_news img {
     background-size: cover;
-    background-position: center center; 
+    background-position: center center;
     width: 100%;
 }
-.news_component .Body_news p{
+
+.news_component .Body_news p {
     margin-top: 5px;
     margin-bottom: 5px;
     padding: 20px;
     font-weight: 500;
     font-size: 15px;
     text-align: justify;
+}
+
+/*============================= 
+        Selected Gallery
+==============================*/
+
+.slider-container {
+    margin-bottom: 15px;
+}
+
+.slider-container h3 {
+    font-weight: 300;
+    text-align: center;
+}
+
+.slider-container .slider-images .image {
+    height: 350px;
+    background-size: cover !important;
+    background-position: center center !important;
+}
+
+.slider-container .slider-images .description {
+    box-sizing: border-box;
+    padding: 20px;
+    background: #e0e0e0;
+    min-height: 150px;
+}
+
+.slider-container .slider-images .description span {
+    height: 100%;
+}
+
+/*============================= 
+        LikeDisLike Widget CSS
+==============================*/
+
+.addLikeDislike_wrapper h3 {
+    font-weight: 300;
+    text-align: center;
+}
+
+.addLikeDislike_wrapper {
+    /* box-sizing: border-box; */
+    margin-bottom: 10px;
+}
+
+.addLikeDislike_wrapper .addLikeDislike_container {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.addLikeDislike_wrapper .addLikeDislike_container .btn {
+    cursor: pointer;
+    text-align: center;
+    flex: 1;
+    background: #f8f8f8;
+    color: #505e68;
+    font-size: 30px;
+    padding: 20px;
+}
+
+.addLikeDislike_wrapper .addLikeDislike_container .btn:hover {
+    background: #607d8b;
+    color: #f8f8f8;
+}
+
+.addLikeDislike_wrapper .addLikeDislike_container .btn.like {
+    border-right: 1px solid #fff;
+}
+
+.addLikeDislike_wrapper .addLikeDislike_container .btn.dislike {
+    border-left: 1px solid #fff;
 }
